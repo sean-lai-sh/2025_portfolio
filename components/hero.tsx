@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import AnimatedText from './animatedtext'
 const Hero = () => {
@@ -42,6 +43,17 @@ const Hero = () => {
         },
       };
 
+  const taglineText = () =>{
+    const {innerHeight, innerWidth} = window;
+    // if small remove the "together"
+    if(innerWidth < 780){
+      return "Building products & communities"
+    }else{
+      return "Building products & communities together"
+    }
+    // else tdo the entire thing
+  }
+
   return (
     <div>
         <h1 className="mt-40 text-5xl pb-10 font-bold">
@@ -50,13 +62,13 @@ const Hero = () => {
             containerVariants={titleContainerVar} 
             charVariants={titleCharVar}/>
         </h1>
-        <h2 className="text-xl pb-5">
+        <h2 className="text-xl">
             <AnimatedText 
-            text="Building communities and products together"
+            text={taglineText()}
             containerVariants={subtextContainerVar}
             charVariants={subtextCharVar}/>
         </h2>
-        <div className="w-full">
+        <div className="w-full min-h-[10vh]">
           FILL IN MY SOCIALS HERE
         </div>
     </div>

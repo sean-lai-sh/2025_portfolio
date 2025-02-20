@@ -1,6 +1,9 @@
 'use client';
 import React from 'react'
 import AnimatedText from './animatedtext'
+import Link from 'next/link'
+import { AiFillLinkedin, AiFillGithub, AiFillMail, AiFillGitlab } from "react-icons/ai";
+
 const Hero = () => {
     const titleContainerVar = {
         hidden: {},
@@ -54,6 +57,8 @@ const Hero = () => {
     // else tdo the entire thing
   }
 
+  const socialsCSS = "w-10 h-10"
+
   return (
     <div>
         <h1 className="mt-40 text-5xl pb-10 font-bold">
@@ -68,8 +73,19 @@ const Hero = () => {
             containerVariants={subtextContainerVar}
             charVariants={subtextCharVar}/>
         </h2>
-        <div className="w-full min-h-[10vh]">
-          FILL IN MY SOCIALS HERE
+        <div className="w-full min-h-[10vh] flex flex-row">
+          <Link href='https://linkedin.com/in/sean-sh-lai'>
+              <AiFillLinkedin className={`${socialsCSS}`}/>
+          </Link>
+          <Link href="https://github.com/sean-lai-sh">
+            <AiFillGithub className={`${socialsCSS}`}/>
+          </Link>
+          <Link href="mailto:seanlai@nyu.edu">
+            <AiFillMail className={`${socialsCSS}`}/>
+          </Link>
+          <Link href="https://dev.hsrn.nyu.edu/seanlai">
+            <AiFillGitlab className={`${socialsCSS}`}/>
+          </Link>
         </div>
     </div>
   )

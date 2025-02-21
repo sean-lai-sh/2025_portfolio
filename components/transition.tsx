@@ -68,8 +68,8 @@ function Transition({ children}: { children: React.ReactNode}) {
             {
                 setBlocks()
             }
-            
-            </div> */} 
+    
+            </div>  */}
             <div className='relative z-0 mt-16 mx-10'>
                 {children}
             </div>

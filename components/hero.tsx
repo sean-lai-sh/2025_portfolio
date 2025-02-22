@@ -98,16 +98,16 @@ const Hero = () => {
         </h2>
         <div className="w-full min-h-[10vh] flex flex-row">
           <Link href='https://linkedin.com/in/sean-sh-lai'>
-              <AiFillLinkedin className={`${socialsCSS}`}/>
+              <AiFillLinkedin className={`${socialsCSS} hover:text-blue-600`}/>
           </Link>
           <Link href="https://github.com/sean-lai-sh">
-            <AiFillGithub className={`${socialsCSS}`}/>
+            <AiFillGithub className={`${socialsCSS} hover:text-blue-800`}/>
           </Link>
           <Link href="mailto:seanlai@nyu.edu">
-            <AiFillMail className={`${socialsCSS}`}/>
+            <AiFillMail className={`${socialsCSS} hover:text-green-600`}/>
           </Link>
           <Link href="https://dev.hsrn.nyu.edu/seanlai">
-            <AiFillGitlab className={`${socialsCSS}`}/>
+            <AiFillGitlab className={`${socialsCSS} hover:text-orange-500`}/>
           </Link>
         </div>
     </div>

@@ -62,7 +62,7 @@ const Hero = () => {
     // else tdo the entire thing
   }
 
-  const socialsCSS = "w-10 h-10"
+  const socialsCSS = "w-10 h-10 ease-in-out duration-300"
   
 
   useEffect(() => {

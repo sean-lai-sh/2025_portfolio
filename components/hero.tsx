@@ -3,53 +3,58 @@ import React from 'react'
 import AnimatedText from './animatedtext'
 import Link from 'next/link'
 import { AiFillLinkedin, AiFillGithub, AiFillMail, AiFillGitlab } from "react-icons/ai";
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
-    const titleContainerVar = {
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: 0.04,
-          },
-        },
-      };
-    
-      const titleCharVar = {
-        hidden: { opacity: 0, y: '0.5em' },
-        visible: {
-          opacity: 1,
-          y: '0em',
-          transition: {
-            duration: 0.5,
-            ease: [0.33, 1, 0.68, 1], // More fluid easing
-        },    
-        },
-      };
-      const subtextContainerVar = {
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: 0.015,
-          },
-        },
-      };
-    
-      const subtextCharVar = {
-        hidden: { opacity: 0, y: '0.75em' },
-        visible: {
-          opacity: 1,
-          y: '0em',
-          transition: {
-            duration: 0.5,
-            ease: [0.33, 1, 0.68, 1], // More fluid easing
-        },    
-        },
-      };
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  const titleContainerVar = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.04,
+      },
+    },
+  };
+
+  const titleCharVar = {
+    hidden: { opacity: 0, y: '0.5em' },
+    visible: {
+      opacity: 1,
+      y: '0em',
+      transition: {
+        duration: 0.5,
+        ease: [0.33, 1, 0.68, 1], // More fluid easing
+    },    
+    },
+  };
+  const subtextContainerVar = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.015,
+      },
+    },
+  };
+
+  const subtextCharVar = {
+    hidden: { opacity: 0, y: '0.75em' },
+    visible: {
+      opacity: 1,
+      y: '0em',
+      transition: {
+        duration: 0.5,
+        ease: [0.33, 1, 0.68, 1], // More fluid easing
+    },    
+    },
+  };
+  
 
   const taglineText = () =>{
-    const {innerHeight, innerWidth} = window;
     // if small remove the "together"
-    if(innerWidth < 780){
+    if(windowSize.width < 780){
       return "Building products & communities"
     }else{
       return "Building products & communities together"
@@ -58,6 +63,24 @@ const Hero = () => {
   }
 
   const socialsCSS = "w-10 h-10"
+  
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+      taglineText();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function to remove event listener when component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div>

@@ -1,4 +1,4 @@
-const experienceData = {
+export const experienceData = {
     HSRN : {
         role: "Undegraduate Team Lead, Networking systems @ NYU High Speed Research Network",
         date: "Jan 2024 - Present",
@@ -25,4 +25,9 @@ const experienceData = {
     }
 }
 
-export default experienceData;
+export const skillsData = {
+    programmingLanguages : ['Python', 'Javascript', 'Typescript', 'C++', 'Java'],
+    frameworks : ['React', 'Next.js', 'Node.js', 'Django', 'Unreal Engine 5'],
+    tools : ['Git', 'AWS'],
+    databases : ['MongoDB', 'PostgreSQL', 'SQLite', 'Firebase'],
+}

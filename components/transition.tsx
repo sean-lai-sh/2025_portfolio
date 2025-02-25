@@ -70,7 +70,7 @@ function Transition({ children}: { children: React.ReactNode}) {
             }
     
             </div>  */}
-            <div className='relative z-0 mt-16 mx-10'>
+            <div className='relative z-0 mt-16 mx-2 sm:mx-10'>
                 {children}
             </div>
         </div>

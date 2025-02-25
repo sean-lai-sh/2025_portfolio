@@ -55,9 +55,9 @@ const Hero = () => {
   const taglineText = () =>{
     // if small remove the "together"
     if(windowSize.width < 780){
-      return "Building products & communities"
+      return "Building products &\u00A0communities"
     }else{
-      return "Building products & communities together"
+      return "Building products &\u00A0communities together"
     }
     // else tdo the entire thing
   }

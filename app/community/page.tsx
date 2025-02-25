@@ -1,7 +1,7 @@
 export default function Home() {
     return (
       <div>
-          dummy text here
+          Come back here later.... ( it's as the name suggests, "building")
       </div>
     );
   }

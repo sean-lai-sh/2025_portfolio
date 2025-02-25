@@ -63,14 +63,14 @@ function Transition({ children}: { children: React.ReactNode}) {
                 
     }
     return (
-        <div className='relative'>
+        <div className='relative '>
             {/* <div className='flex w-full min-h-[100vh] overflow-hidden z-10 absolute top-0 left-0'>
             {
                 setBlocks()
             }
     
             </div>  */}
-            <div className='relative z-0 mt-16 mx-2 sm:mx-10'>
+            <div className='relative z-0 pt-16 px-10'>
                 {children}
             </div>
         </div>

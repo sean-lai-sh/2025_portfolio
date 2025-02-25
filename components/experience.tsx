@@ -8,7 +8,7 @@ const Experience = () => {
   }
   return (
     <div>
-        <h2>Experience</h2>
+        <h2 className='text-3xl text-semibold'>Experience</h2>
         <div>
             {
                 Object.entries(experienceData).map(([keys, exp])=> (
@@ -21,7 +21,7 @@ const Experience = () => {
                 />))
             }
         </div>
-        <div>
+        <div className='pt-4'>
             <h2 className='w-full border-b-2 border-gray-500 '>Skills</h2>
             {
                 Object.entries(skillsData).map(([keys, skills]) => (
@@ -88,7 +88,8 @@ const ExpTag = ({position, dates, skills, shortDescript} : {position: string, da
     // Joins by the middle dot and space 
     const skillArrFormat = skills.join().replace(/,/g, ' • ')
     return (
-      <div ref={myRef} className='w-full text-xl border-b-2 border-black hover:border-blue-400 md:py-4 md:hover:pb-6 hover:border-b-[6px] transition-all duration-300 ease-in-out'>
+      <div ref={myRef} 
+        className='w-full text-xl border-b-2 border-black hover:border-blue-400 md:py-4 md:hover:pb-6 hover:border-b-[6px] transition-all duration-300 ease-in-out hover:cursor-pointer'>
         <div className='md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid h-fit'>
             <h3 className='text-left flex min-w-[70%] w-fit md:col-span-3 row-span-2 h-fit'>{position}</h3>
             <h3 className='md:text-right h-fit'>{dates}</h3>

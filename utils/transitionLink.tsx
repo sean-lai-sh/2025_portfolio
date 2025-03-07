@@ -8,26 +8,26 @@ interface TransitionLinkProps extends LinkProps {
     className?: string;
 }
 
-function sleep(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+// function sleep(ms: number) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
 
 const TransitionLink = ({children, href, className, ...props}: TransitionLinkProps) => {
     const router = useRouter();
 
-    const handleTransition = async (
-        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-    ) => {
-        e.preventDefault();
+    // const handleTransition = async (
+    //     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    // ) => {
+    //     e.preventDefault();
 
-        // TODO: Perform Animation exit
+    //     // TODO: Perform Animation exit
 
-        // Wait for animations to finish
-        await sleep(500);
-        router.push(href);
+    //     // Wait for animations to finish
+    //     await sleep(500);
+    //     router.push(href);
 
-        // Run the enter animation
-    }
+    //     // Run the enter animation
+    // }
 
     return (
     <Link 

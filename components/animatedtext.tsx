@@ -6,7 +6,6 @@ import React from 'react';
 
 const AnimatedText = ({ text, containerVariants, charVariants  } : {text: string, containerVariants: Variants, charVariants: Variants}) => {
   const characters = splitText(text);
-  const finalSplit = <></>;
   // Objetives, have function that takes in text and has first grouped by char, then by word, then by sentence
   const splitWordsByChar = (text: Array<string>) => {
     return text.map((word, index) => {

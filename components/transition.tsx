@@ -42,7 +42,7 @@ function Transition({ children}: { children: React.ReactNode}) {
         return delays.map((randomDelay, i) => {
             return (
                 <motion.div className={`h-[5vw] w-full bg-black`} key={i}
-                 variants={anim} initial={"open"} animate={ "close"}
+                 variants={anim} initial={"initial"} animate={ "close"}
                  custom={randomDelay}></motion.div>
             )
         })
@@ -51,7 +51,7 @@ function Transition({ children}: { children: React.ReactNode}) {
     
 
     const setBlocks = () => {
-        const {innerWidth, innerHeight} = window;
+        const {innerWidth} = window;
         // If Small set to 10vw else set to 5vw
         const blockSize = innerWidth < 768 ? 10 : 5;
         const blockSpace = innerWidth < 768 ? 0.1 : 0.05;
@@ -64,12 +64,12 @@ function Transition({ children}: { children: React.ReactNode}) {
     }
     return (
         <div className='relative '>
-            {/* <div className='flex w-full min-h-[100vh] overflow-hidden z-10 absolute top-0 left-0'>
+            <div className='flex w-full min-h-[100vh] overflow-hidden z-10 absolute top-0 left-0'>
             {
                 setBlocks()
             }
     
-            </div>  */}
+            </div> 
             <div className='relative z-0 pt-16 px-10'>
                 {children}
             </div>

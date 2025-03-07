@@ -62,7 +62,7 @@ const Hero = () => {
     // else tdo the entire thing
   }
 
-  const socialsCSS = "w-10 h-10 ease-in-out duration-300"
+  const socialsCSS = "w-7 h-7 ease-in-out duration-300 font-light text-slate-700"
   
 
   useEffect(() => {
@@ -80,23 +80,23 @@ const Hero = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [taglineText]);
 
   return (
     <div>
-        <h1 className="mt-40 text-5xl pb-10 font-bold">
+        <h1 className="pt-40 text-5xl pb-3 font-bold">
             <AnimatedText 
             text="Sean Lai" 
             containerVariants={titleContainerVar} 
             charVariants={titleCharVar}/>
         </h1>
-        <h2 className="text-xl">
+        <h2 className="text-xl font-medium text-slate-900">
             <AnimatedText 
             text={taglineText()}
             containerVariants={subtextContainerVar}
             charVariants={subtextCharVar}/>
         </h2>
-        <div className="w-full min-h-[10vh] flex flex-row">
+        <div className="w-full min-h-[5vh] flex flex-row pb-10">
           <Link href='https://linkedin.com/in/sean-sh-lai'>
               <AiFillLinkedin className={`${socialsCSS} hover:text-blue-600`}/>
           </Link>

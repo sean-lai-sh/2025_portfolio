@@ -42,7 +42,7 @@ export default Experience
 
 
 
-const ExpTag = ({position, dates, skills, shortDescript} : {position: string, dates:string, skills:Array<String>, shortDescript:string}) => {
+const ExpTag = ({position, dates, skills, shortDescript} : {position: string, dates:string, skills:Array<string>, shortDescript:string}) => {
     const [hovered, setHovered] = useState(false);
     const myRef = React.useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -90,17 +90,21 @@ const ExpTag = ({position, dates, skills, shortDescript} : {position: string, da
     return (
       <div ref={myRef} 
         className='w-full text-xl border-b-2 border-black hover:border-blue-400 md:py-4 md:hover:pb-6 hover:border-b-[6px] transition-all duration-300 ease-in-out hover:cursor-pointer'>
-        <div className='md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid h-fit'>
-            <h3 className='text-left flex min-w-[70%] w-fit md:col-span-3 row-span-2 h-fit'>{position}</h3>
-            <h3 className='md:text-right h-fit'>{dates}</h3>
+        <div className='md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid h-fit font-medium'>
+            <h3 className='text-left flex min-w-[70%] w-fit md:col-span-3 row-span-2 h-fit'>   
+                {position}
+            </h3>
+            <h3 className='md:text-right h-fit'>
+                {dates}
+            </h3>
         </div>
         {/* On hover showcase the  */}
         <div>
-            <div className='text-lg font-bold hidden md:block'>
+            <div className='font-medium text-sm hidden md:block'>
                 {skillArrFormat}
             </div>
             {
-                hovered && <motion.div className='text-black text-lg '  variants={animation} initial={'initial'} animate={hovered ? `afterHover` : `postHover`}  >
+                hovered && <motion.div className='text-slate-900 text-base font-light'  variants={animation} initial={'initial'} animate={hovered ? `afterHover` : `postHover`}  >
                     {shortDescript}
                 </motion.div>
             }

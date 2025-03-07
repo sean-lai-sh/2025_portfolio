@@ -1,4 +1,10 @@
 export const experienceData = {
+    AI4CE : {
+        role: "Research Assistant, AI4CE",
+        date: "Feb 2025 - Present",
+        skills: ['Python','Parallel Computing', 'sapien', 'SimplerEnv'],
+        shortDescript: 'Improving simulation software SimplerEnv for vision language action software'
+    },
     HSRN : {
         role: "Undegraduate Team Lead, Networking systems @ NYU High Speed Research Network",
         date: "Jan 2024 - Present",

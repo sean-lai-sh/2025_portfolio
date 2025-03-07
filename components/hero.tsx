@@ -1,5 +1,5 @@
 'use client';
-import React from 'react'
+import React, { useCallback } from 'react'
 import AnimatedText from './animatedtext'
 import Link from 'next/link'
 import { AiFillLinkedin, AiFillGithub, AiFillMail, AiFillGitlab } from "react-icons/ai";
@@ -52,7 +52,7 @@ const Hero = () => {
   };
   
 
-  const taglineText = () =>{
+  const taglineText = useCallback(() =>{
     // if small remove the "together"
     if(windowSize.width < 780){
       return "Building products &\u00A0communities"
@@ -60,7 +60,7 @@ const Hero = () => {
       return "Building products &\u00A0communities together"
     }
     // else tdo the entire thing
-  }
+  }, [windowSize.width])
 
   const socialsCSS = "w-7 h-7 ease-in-out duration-300 font-light text-slate-700"
   

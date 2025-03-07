@@ -31,7 +31,7 @@ export default function RootLayout({
         
       >
         <Header />
-        <main className="bg-[#faf0e6] h-screen">{children}</main>
+        <main className="">{children}</main>
       </body>
     </html>
   );

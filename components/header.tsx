@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import TransitionLink from '../utils/transitionLink'
 const Header = () => {
   const TransitionLinkCSS = "px-3 lg:px-4 py-2 hover:bg-white hover:shadow-gray-500 hover:text-black ease-in-out rounded-md shadow-sm"

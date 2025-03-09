@@ -3,19 +3,19 @@ export const experienceData = {
         role: "Research Assistant, AI4CE",
         date: "Feb 2025 - Present",
         skills: ['Python','Parallel Computing', 'sapien', 'SimplerEnv'],
-        shortDescript: 'Improving simulation software SimplerEnv for vision language action software'
+        shortDescript: 'Improving simulation software SimplerEnv for vision language action model benchmarks'
     },
     HSRN : {
         role: "Undegraduate Team Lead, Networking systems @ NYU High Speed Research Network",
         date: "Jan 2024 - Present",
         skills: ['C++', 'Python', 'Unreal Engine 5', 'Product Management', 'Network Analysis'],
-        shortDescript: 'Built & documented open-source packages & networking solutions used by labs @ NYU'
+        shortDescript: 'Built & documented open-source packages & networking solutions used by labs @ nyu'
     },
     NYUEI:{
         role: "Advisory Board Member @ NYU Entrepreneurial Institute",
         date: "Nov 2024 - Present",
         skills: ['Fund Raising', 'Business Development', 'Community Building'],
-        shortDescript: 'Fund clubs and initatives supporting founders'
+        shortDescript: 'Fund clubs and initatives supporting founders @ nyu'
     },
     NYUSEI :{
         role: "Undergraduate Data Analytics Researcher @ NYU Sustainable Engineering",
@@ -32,8 +32,8 @@ export const experienceData = {
 }
 
 export const skillsData = {
-    programmingLanguages : ['Python', 'Javascript', 'Typescript', 'C++', 'Java'],
-    frameworks : ['React', 'Next.js', 'Node.js', 'Django', 'Unreal Engine 5'],
-    tools : ['Git', 'AWS'],
-    databases : ['MongoDB', 'PostgreSQL', 'SQLite', 'Firebase'],
+    "Programming Languages" : ['Python', 'Javascript', 'Typescript', 'C++', 'Java'],
+    "Frameworks" : ['React', 'Next.js', 'Node.js', 'Django', 'Unreal Engine 5'],
+    "Tools" : ['Git', 'AWS'],
+    "Databases" : ['MongoDB', 'PostgreSQL', 'SQLite', 'Firebase'],
 }

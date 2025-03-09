@@ -25,9 +25,9 @@ const Experience = () => {
             <h2 className='w-full border-b-2 border-gray-500 '>Skills</h2>
             {
                 Object.entries(skillsData).map(([keys, skills]) => (
-                    <div key={keys} className=''>
-                        <h3 className='t'>{keys}:{formatSkills(skills)}</h3>
-                        <h3 className=''></h3>
+                    <div key={keys} className='w-full'>
+                        <h3 className='md:inline font-medium'>{keys}:</h3>
+                        <h3 className='md:inline font-normal'> {formatSkills(skills)}</h3>
                     </div>
                 ))
             }
@@ -90,7 +90,7 @@ const ExpTag = ({position, dates, skills, shortDescript} : {position: string, da
     return (
       <div ref={myRef} 
         className='w-full text-xl border-b-2 border-black hover:border-blue-400 md:py-4 md:hover:pb-6 hover:border-b-[6px] transition-all duration-300 ease-in-out hover:cursor-pointer'>
-        <div className='md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid h-fit font-medium'>
+        <div className='md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid h-fit font-medum'>
             <h3 className='text-left flex min-w-[70%] w-fit md:col-span-3 row-span-2 h-fit'>   
                 {position}
             </h3>
@@ -104,7 +104,7 @@ const ExpTag = ({position, dates, skills, shortDescript} : {position: string, da
                 {skillArrFormat}
             </div>
             {
-                hovered && <motion.div className='text-slate-900 text-base font-light'  variants={animation} initial={'initial'} animate={hovered ? `afterHover` : `postHover`}  >
+                hovered && <motion.div className='text-base font-light'  variants={animation} initial={'initial'} animate={hovered ? `afterHover` : `postHover`}  >
                     {shortDescript}
                 </motion.div>
             }

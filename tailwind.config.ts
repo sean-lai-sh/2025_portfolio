@@ -12,7 +12,18 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        'glitch-colors': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+      },
+      animation: {
+        'glitch-colors': 'glitch-colors 0.03s infinite ease-in-out',
+      },
     },
   },
   plugins: [],
 } satisfies Config;
+

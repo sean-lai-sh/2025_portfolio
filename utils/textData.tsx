@@ -37,3 +37,28 @@ export const skillsData = {
     "Tools" : ['Git', 'AWS'],
     "Databases" : ['MongoDB', 'PostgreSQL', 'SQLite', 'Firebase'],
 }
+
+
+export const projs ={
+    AutoGO: {
+        ProjName: 'AutoGo',
+        TechStack:['Python'
+            , 'numpy', 'sgf', 
+            'raspberry pi'],
+        Liner:'Self playing chinese chess board',
+        frontImg:'test.jpg',
+        backImg:'final.jpg',
+        CTA:'View Design Report',
+        designReport:'#',
+    },
+    Embodied_AI_Navigator: {
+        ProjName: 'Embodied AI Navigator',
+        TechStack:['Python', 'pygame', 'PyTorch', 'numpy', 'OpenCV'],
+        Liner:'Autonomous navigation in a simulated environment',
+        frontImg:'test.jpg',
+        backImg:'final.jpg',
+        CTA:'View Design Report',
+        designReport:'#',
+    },
+    
+}

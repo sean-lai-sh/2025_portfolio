@@ -31,7 +31,7 @@ export default function RootLayout({
         
       >
         <Header />
-        <main className="">{children}</main>
+        <main className="offset-spacing">{children}</main>
       </body>
     </html>
   );

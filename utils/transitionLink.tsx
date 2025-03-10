@@ -15,6 +15,7 @@ interface TransitionLinkProps extends LinkProps {
 const TransitionLink = ({children, href, className, ...props}: TransitionLinkProps) => {
     const router = useRouter();
 
+    // Code In progress to run animations on page transition
     // const handleTransition = async (
     //     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
     // ) => {

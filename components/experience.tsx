@@ -8,7 +8,7 @@ const Experience = () => {
   }
   return (
     <div>
-        <h2 className='text-3xl text-semibold'>Experience</h2>
+        <h2 className='text-section-title'>Experience</h2>
         <div>
             {
                 Object.entries(experienceData).map(([keys, exp])=> (
@@ -45,7 +45,15 @@ export default Experience
 const ExpTag = ({position, dates, skills, shortDescript} : {position: string, dates:string, skills:Array<string>, shortDescript:string}) => {
     const [hovered, setHovered] = useState(false);
     const myRef = React.useRef<HTMLDivElement>(null);
+    const [windowSize, setWindowSize] = useState([0, 0]);
     useEffect(() => {
+        // Update the window size on resize
+        function handleResize() {
+            setWindowSize([window.innerWidth, window.innerHeight]);
+        }
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        
       // Detect if the user is hovering over the element
         const node = myRef.current;
         if(node){
@@ -60,6 +68,7 @@ const ExpTag = ({position, dates, skills, shortDescript} : {position: string, da
         return () => {
             node?.removeEventListener('mouseenter', () => setHovered(true));
             node?.removeEventListener('mouseleave', () => setHovered(false));
+            window.removeEventListener('resize', handleResize);
         }
     }, [hovered])
 
@@ -90,21 +99,21 @@ const ExpTag = ({position, dates, skills, shortDescript} : {position: string, da
     return (
       <div ref={myRef} 
         className='w-full text-xl border-b-2 border-black hover:border-blue-400 md:py-4 md:hover:pb-6 hover:border-b-[6px] transition-all duration-300 ease-in-out hover:cursor-pointer'>
-        <div className='md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid h-fit font-medum'>
-            <h3 className='text-left flex min-w-[70%] w-fit md:col-span-3 row-span-2 h-fit'>   
+        <div className='md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid h-fit font-medium'>
+            <h3 className='text-body flex min-w-[70%] w-fit md:col-span-3 row-span-2 h-fit'>   
                 {position}
             </h3>
-            <h3 className='md:text-right h-fit'>
+            <h3 className='md:text-right  text-body h-fit'>
                 {dates}
             </h3>
         </div>
         {/* On hover showcase the  */}
         <div>
-            <div className='font-medium text-sm hidden md:block'>
+            <div className='font-medium text-small hidden md:block'>
                 {skillArrFormat}
             </div>
             {
-                hovered && <motion.div className='text-base font-light'  variants={animation} initial={'initial'} animate={hovered ? `afterHover` : `postHover`}  >
+                windowSize[0] > 600 && hovered && <motion.div className='text-small'  variants={animation} initial={'initial'} animate={hovered ? `afterHover` : `postHover`}  >
                     {shortDescript}
                 </motion.div>
             }

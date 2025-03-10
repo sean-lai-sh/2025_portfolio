@@ -84,13 +84,13 @@ const Hero = () => {
 
   return (
     <div>
-        <h1 className="pt-40 text-5xl pb-3 font-bold">
+        <h1 className="text-titlefont font-bold">
             <AnimatedText 
             text="Sean Lai" 
             containerVariants={titleContainerVar} 
             charVariants={titleCharVar}/>
         </h1>
-        <h2 className="text-xl font-medium text-slate-900">
+        <h2 className="text-xl text-subtitle">
             <AnimatedText 
             text={taglineText()}
             containerVariants={subtextContainerVar}

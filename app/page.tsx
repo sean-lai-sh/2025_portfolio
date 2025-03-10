@@ -5,7 +5,7 @@ import HeroComp from "@/components/heroComp";
 
 export default function Home() {
   return (
-    <div className="pb-10 px-5 h-full">
+    <div className="pb-10 px-5 h-full min-header-offset">
         <HeroComp/>
         <Experience/>
     </div>
